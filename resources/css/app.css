@@ -41,8 +41,46 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.form button {
-    align-self: flex-end;
+.form-header {
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.form-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--judiciary-deep-green);
+    margin: 0 0 6px 0;
+}
+
+.form-subtitle {
+    font-size: 13px;
+    color: #555e59;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.alert {
+    padding: 10px 14px;
+    border-radius: 10px;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.alert-success {
+    background-color: #eaf5ed;
+    color: var(--judiciary-deep-green);
+    border: 1px solid #c2e2cc;
+}
+
+.alert-error {
+    background-color: #fef2f2;
+    color: #991b1b;
+    border: 1px solid #fecaca;
+}
+
+.alert-error p {
+    margin: 2px 0;
 }
 
 .flex-column > label {
@@ -57,14 +95,17 @@ body {
     display: flex;
     align-items: center;
     padding-left: 10px;
+    padding-right: 10px;
     transition: 0.2s ease-in-out;
+    position: relative;
 }
 
 .input {
     margin-left: 10px;
     border-radius: 10px;
     border: none;
-    width: 100%;
+    flex: 1;
+    min-width: 0;
     height: 100%;
     background: transparent;
 }
@@ -75,6 +116,34 @@ body {
 
 .inputForm:focus-within {
     border: 1.5px solid var(--judiciary-green);
+}
+
+.toggle-password {
+    margin-left: auto;
+    align-self: center;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 4px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #6b7280;
+    line-height: 1;
+    flex-shrink: 0;
+    transition: color 0.2s ease-in-out;
+}
+
+.toggle-password:hover {
+    color: var(--judiciary-green);
+}
+
+.toggle-password svg {
+    width: 20px;
+    height: 20px;
+    display: block;
+    fill: currentColor;
 }
 
 .flex-row {
